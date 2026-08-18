@@ -15,14 +15,14 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "DEEP. DARK. SEDUCTIVE. Crushed berries over amber and musk. A unisex parfum from Sarkar.",
+          "Berry Blast by Sarkar — deep, dark, seductive. Blueberry, raspberry and mulberry over amber and musk. Unisex parfum, 100ml, ₹2,499.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Berry Blast (100ml) | Sarkar Parfum" },
       {
         name: "twitter:description",
-        content: "DEEP. DARK. SEDUCTIVE. Crushed berries over amber and musk.",
+        content: "Berry Blast by Sarkar — deep, dark, seductive. Blueberry, raspberry and mulberry over amber and musk. Unisex parfum, 100ml, ₹2,499.",
       },
     ],
   }),
