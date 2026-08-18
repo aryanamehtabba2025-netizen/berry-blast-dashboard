@@ -176,6 +176,8 @@ function Index() {
                 height={1080}
                 className="relative rounded-2xl border border-border/30 shadow-2xl"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
           </div>
