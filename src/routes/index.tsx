@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImage from "../assets/berry-blast-bottle.png";
+import heroImage from "../assets/berry-blast-bottle.webp";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,6 +25,7 @@ export const Route = createFileRoute("/")({
         content: "Berry Blast by Sarkar — deep, dark, seductive. Blueberry, raspberry and mulberry over amber and musk. Unisex parfum, 100ml, ₹2,499.",
       },
     ],
+    links: [{ rel: "preload", as: "image", href: heroImage, fetchpriority: "high" }],
   }),
 });
 
@@ -175,6 +176,8 @@ function Index() {
                 height={1080}
                 className="relative rounded-2xl border border-border/30 shadow-2xl"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
           </div>
