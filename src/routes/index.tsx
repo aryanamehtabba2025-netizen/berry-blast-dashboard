@@ -32,9 +32,9 @@ export const Route = createFileRoute("/")({
 });
 
 const notes = [
-  { name: "Blueberry", role: "Top note", color: "bg-[#3a4b96]" },
-  { name: "Raspberry", role: "Heart note", color: "bg-[#9b1c31]" },
-  { name: "Mulberry", role: "Base note", color: "bg-[#2d0a31]" },
+  { name: "Blueberry", role: "Top note", color: "bg-blueberry" },
+  { name: "Raspberry", role: "Heart note", color: "bg-raspberry" },
+  { name: "Mulberry", role: "Base note", color: "bg-mulberry" },
 ];
 
 const stats = [

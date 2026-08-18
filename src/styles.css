@@ -49,6 +49,9 @@
   --color-ink: var(--ink);
   --color-mist: var(--mist);
   --color-juice: var(--juice);
+  --color-blueberry: var(--blueberry);
+  --color-raspberry: var(--raspberry);
+  --color-mulberry: var(--mulberry);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -104,6 +107,9 @@
   --ink: oklch(0.06 0.005 270);
   --mist: oklch(0.75 0.01 270);
   --juice: oklch(0.42 0.22 20);
+  --blueberry: oklch(0.42 0.12 270);
+  --raspberry: oklch(0.45 0.22 20);
+  --mulberry: oklch(0.32 0.16 310);
 
   --chart-1: oklch(0.45 0.18 310);
   --chart-2: oklch(0.48 0.2 330);
