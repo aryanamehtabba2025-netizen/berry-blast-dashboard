@@ -164,3 +164,28 @@
   background: color-mix(in oklab, var(--color-card) 80%, transparent);
   backdrop-filter: blur(12px);
 }
+
+
+@media (max-width: 639px) {
+  html {
+    scroll-padding-top: 7rem;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

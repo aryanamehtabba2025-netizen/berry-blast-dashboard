@@ -98,14 +98,14 @@ function Index() {
       />
 
       {/* Announcement bar */}
-      <div className="border-b border-border/40 bg-ink py-2.5 text-center text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+      <div className="border-b border-border/40 bg-ink px-4 py-2 text-center text-[9px] font-semibold uppercase leading-relaxed tracking-[0.18em] text-muted-foreground sm:text-[11px] sm:tracking-[0.28em]">
         Claim two 7ml freebies with every order
       </div>
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <span className="text-xl font-semibold tracking-[0.3em] text-foreground">SARKAR</span>
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
+          <span className="text-base font-semibold tracking-[0.24em] text-foreground sm:text-xl sm:tracking-[0.3em]">SARKAR</span>
           <div className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground md:flex">
             <a href="#parfum" className="transition-colors hover:text-foreground">
               Parfum
@@ -120,32 +120,41 @@ function Index() {
               FAQs
             </a>
           </div>
-          <button className="berry-gradient rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-primary-foreground transition-transform hover:scale-105">
+          <a href="#purchase" className="berry-gradient min-h-11 rounded-full px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-transform active:scale-95 sm:px-5 sm:text-xs sm:tracking-[0.15em] sm:hover:scale-105">
             Add To Cart
-          </button>
+          </a>
         </div>
       </nav>
 
+      <div className="sticky top-[51px] z-40 border-b border-border/30 bg-background/95 px-4 py-2 backdrop-blur md:hidden">
+        <div className="no-scrollbar flex gap-5 overflow-x-auto text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+          <a href="#parfum" className="shrink-0 py-1">Parfum</a>
+          <a href="#notes" className="shrink-0 py-1">Notes</a>
+          <a href="#story" className="shrink-0 py-1">Story</a>
+          <a href="#faqs" className="shrink-0 py-1">FAQs</a>
+        </div>
+      </div>
+
       {/* Hero */}
-      <section id="parfum" className="relative mx-auto max-w-7xl px-6 py-12 lg:py-20">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="order-2 space-y-8 lg:order-1">
+      <section id="parfum" className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:py-20">
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="order-2 space-y-6 sm:space-y-8 lg:order-1">
             <div className="space-y-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-berry">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-berry sm:text-[11px] sm:tracking-[0.3em]">
                 Unisex · Berry · Parfum
               </p>
-              <h1 className="text-5xl font-bold uppercase leading-[0.9] tracking-tight md:text-7xl lg:text-8xl">
+              <h1 className="text-4xl font-bold uppercase leading-[0.9] tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
                 Berry
                 <br />
                 <span className="text-berry">Blast</span>
               </h1>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-mist">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mist sm:text-sm sm:tracking-[0.28em]">
                 Deep. Dark. Seductive.
               </p>
-              <p className="max-w-md text-sm uppercase tracking-[0.15em] text-muted-foreground">
+              <p className="max-w-md text-xs uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.15em]">
                 Late nights · Slow dances · Second glances
               </p>
-              <p className="max-w-md text-lg leading-relaxed text-muted-foreground">
+              <p className="max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
                 It smells like crushed berries, warm skin and the last word.
               </p>
             </div>
@@ -157,25 +166,25 @@ function Index() {
               </span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <button className="berry-gradient juice-glow rounded-full px-8 py-3.5 text-sm font-semibold uppercase tracking-[0.15em] text-primary-foreground transition-transform hover:scale-105">
+            <div className="grid gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
+              <button className="berry-gradient juice-glow min-h-12 rounded-full px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-transform active:scale-95 sm:px-8 sm:tracking-[0.15em] sm:hover:scale-105">
                 Add To Cart
               </button>
-              <button className="rounded-full border border-border bg-card/50 px-8 py-3.5 text-sm font-semibold uppercase tracking-[0.15em] text-foreground transition-colors hover:bg-card">
+              <button className="min-h-12 rounded-full border border-border bg-card/50 px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] text-foreground transition-colors active:bg-card sm:px-8 sm:tracking-[0.15em] sm:hover:bg-card">
                 Explore Parfum
               </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 pt-2">
+            <div className="grid grid-cols-3 gap-2 pt-2 sm:gap-4">
               {meta.map((item) => (
                 <div
                   key={item.label}
-                  className="glass-card rounded-xl border border-border/50 p-4 text-center"
+                  className="glass-card rounded-xl border border-border/50 p-2.5 text-center sm:p-4"
                 >
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="text-[9px] uppercase leading-tight tracking-[0.12em] text-muted-foreground sm:text-[10px] sm:tracking-[0.2em]">
                     {item.label}
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-foreground">{item.value}</p>
+                  <p className="mt-1 text-xs font-semibold text-foreground sm:text-sm">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -202,12 +211,12 @@ function Index() {
       </section>
 
       {/* Product description */}
-      <section id="story" className="border-y border-border/40 bg-ink/50 py-20">
-        <div className="mx-auto max-w-4xl px-6 text-center">
+      <section id="story" className="border-y border-border/40 bg-ink/50 py-14 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
             Product Description
           </h2>
-          <p className="mt-6 text-2xl font-light leading-relaxed text-foreground">
+          <p className="mt-5 text-xl font-light leading-relaxed text-foreground sm:mt-6 sm:text-2xl">
             Blueberry and raspberry open cold and tart. Mulberry and plum sink into amber and musk
             for a long, stained trail.
           </p>
@@ -218,9 +227,9 @@ function Index() {
       </section>
 
       {/* Notes */}
-      <section id="notes" className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-semibold uppercase tracking-tight md:text-4xl">
+      <section id="notes" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mb-8 text-center sm:mb-12">
+          <h2 className="text-2xl font-semibold uppercase tracking-tight sm:text-3xl md:text-4xl">
             The Berry <span className="text-berry">Trinity</span>
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
@@ -228,11 +237,11 @@ function Index() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-3 sm:gap-6 md:grid-cols-3">
           {noteLayers.map((note) => (
             <div
               key={note.label}
-              className="group glass-card rounded-2xl border border-border/50 p-6 transition-all hover:border-berry/30"
+              className="group glass-card rounded-2xl border border-border/50 p-5 transition-all sm:p-6 sm:hover:border-berry/30"
             >
               <div className="mb-5 flex items-center gap-4">
                 <div className={`h-3 w-3 rounded-full ${note.color} ring-2 ring-white/10`} />
@@ -249,7 +258,7 @@ function Index() {
 
       {/* Packaging / details */}
       <section className="border-y border-border/40 bg-ink/50 py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:gap-12 sm:px-6 lg:grid-cols-2">
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold uppercase tracking-tight md:text-4xl">
               The Same <span className="text-berry">Throne</span>
@@ -274,15 +283,15 @@ function Index() {
             </ul>
           </div>
 
-          <div className="glass-card relative overflow-hidden rounded-3xl border border-border/50 p-8">
+          <div id="purchase" className="glass-card relative scroll-mt-28 overflow-hidden rounded-3xl border border-border/50 p-5 sm:p-8">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-berry/20 blur-3xl" />
             <div className="relative z-10 space-y-6">
-              <div className="flex items-end justify-between">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                     Sarkar Parfum
                   </p>
-                  <p className="mt-1 text-3xl font-semibold uppercase text-foreground">
+                  <p className="mt-1 text-2xl font-semibold uppercase text-foreground sm:text-3xl">
                     Berry Blast
                   </p>
                   <p className="mt-1 text-xs uppercase tracking-[0.2em] text-berry">
@@ -303,13 +312,13 @@ function Index() {
       </section>
 
       {/* FAQs */}
-      <section id="faqs" className="mx-auto max-w-4xl px-6 py-20">
-        <h2 className="mb-10 text-center text-3xl font-semibold uppercase tracking-tight md:text-4xl">
+      <section id="faqs" className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
+        <h2 className="mb-8 text-center text-2xl font-semibold uppercase tracking-tight sm:mb-10 sm:text-3xl md:text-4xl">
           FAQs
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, i) => (
-            <div key={faq.q} className="glass-card rounded-2xl border border-border/50 p-6">
+            <div key={faq.q} className="glass-card rounded-2xl border border-border/50 p-4 sm:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 {i + 1}. {faq.q}
               </h3>
@@ -319,8 +328,8 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border/40 bg-ink py-10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
+      <footer className="border-t border-border/40 bg-ink pb-24 pt-10 sm:py-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-center sm:px-6 md:flex-row md:text-left">
           <span className="text-lg font-semibold tracking-[0.3em] text-foreground">SARKAR</span>
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Berry Blast — Deep. Dark. Seductive.
@@ -335,6 +344,12 @@ function Index() {
           </div>
         </div>
       </footer>
+
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border/50 bg-background/95 p-3 backdrop-blur md:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
+        <a href="#purchase" className="berry-gradient flex min-h-12 items-center justify-center rounded-full px-5 text-sm font-semibold uppercase tracking-[0.14em] text-primary-foreground active:scale-[0.98]">
+          Buy Berry Blast · ₹ 2,499
+        </a>
+      </div>
     </main>
   );
 }
