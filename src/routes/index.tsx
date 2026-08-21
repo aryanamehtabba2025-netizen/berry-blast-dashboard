@@ -235,11 +235,12 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold uppercase tracking-tight md:text-4xl">
-              Seduction in a <span className="text-berry">Clear Bottle</span>
+              The Same <span className="text-berry">Throne</span>
             </h2>
             <p className="leading-relaxed text-muted-foreground">
-              The same Sarkar silhouette you already know — clear glass, heavy base, clean type. Only
-              the tag changes: a deep purple seal for the darkest berry in the house.
+              The same Sarkar silhouette you already know — the chess king, crowned cap, heavy
+              pedestal base, SARKAR engraved in silver. Only the glass changes: a deep berry violet
+              with a purple tag for the darkest scent in the house.
             </p>
             <ul className="space-y-3 text-sm text-muted-foreground">
               {[
