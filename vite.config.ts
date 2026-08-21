@@ -12,4 +12,14 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    routeRules: {
+      // Vite fingerprints these files, making a one-year immutable cache safe.
+      "/assets/**": {
+        headers: {
+          "cache-control": "public, max-age=31536000, immutable",
+        },
+      },
+    },
+  },
 });
