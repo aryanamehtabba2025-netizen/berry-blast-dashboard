@@ -171,9 +171,9 @@ function Index() {
               <div className="juice-glow absolute inset-0 -z-10 rounded-full opacity-60 blur-3xl" />
               <img
                 src={heroImage}
-                alt="Berry Blast by Sarkar — clear perfume bottle with a purple tag surrounded by blueberries, raspberries and mulberries with dark berry juices"
-                width={1920}
-                height={1080}
+                alt="Berry Blast by Sarkar — the signature chess-king Sarkar bottle in deep purple glass with a purple tag, surrounded by blueberries, raspberries and mulberries in dark berry juices"
+                width={1600}
+                height={1200}
                 className="relative rounded-2xl border border-border/30 shadow-2xl"
                 loading="eager"
                 decoding="async"
