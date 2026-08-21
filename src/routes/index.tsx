@@ -90,7 +90,8 @@ function Index() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
       <div
-        className="pointer-events-none fixed inset-0 -z-10"
+        aria-hidden="true"
+        className="page-background pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
             "radial-gradient(circle at 50% 25%, color-mix(in oklab, oklch(0.25 0.08 310) 22%, transparent) 0%, transparent 62%), linear-gradient(to bottom, oklch(0.06 0.005 270), oklch(0.1 0.01 270))",
@@ -200,10 +201,11 @@ function Index() {
                 alt="Berry Blast by Sarkar — the signature chess-king Sarkar bottle in deep purple glass with a purple tag, surrounded by blueberries, raspberries and mulberries in dark berry juices"
                 width={1280}
                 height={960}
-                className="relative rounded-2xl border border-border/30 shadow-2xl"
+                className="relative h-auto w-full rounded-2xl border border-border/30 shadow-2xl"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
+                draggable={false}
               />
             </div>
           </div>
@@ -211,7 +213,7 @@ function Index() {
       </section>
 
       {/* Product description */}
-      <section id="story" className="border-y border-border/40 bg-ink/50 py-14 sm:py-20">
+      <section id="story" className="defer-render border-y border-border/40 bg-ink/50 py-14 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
             Product Description
@@ -227,7 +229,7 @@ function Index() {
       </section>
 
       {/* Notes */}
-      <section id="notes" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+      <section id="notes" className="defer-render mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <div className="mb-8 text-center sm:mb-12">
           <h2 className="text-2xl font-semibold uppercase tracking-tight sm:text-3xl md:text-4xl">
             The Berry <span className="text-berry">Trinity</span>
@@ -257,7 +259,7 @@ function Index() {
       </section>
 
       {/* Packaging / details */}
-      <section className="border-y border-border/40 bg-ink/50 py-20">
+      <section className="defer-render border-y border-border/40 bg-ink/50 py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:gap-12 sm:px-6 lg:grid-cols-2">
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold uppercase tracking-tight md:text-4xl">
@@ -312,7 +314,7 @@ function Index() {
       </section>
 
       {/* FAQs */}
-      <section id="faqs" className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
+      <section id="faqs" className="defer-render mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
         <h2 className="mb-8 text-center text-2xl font-semibold uppercase tracking-tight sm:mb-10 sm:text-3xl md:text-4xl">
           FAQs
         </h2>
@@ -328,7 +330,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border/40 bg-ink pb-24 pt-10 sm:py-10">
+      <footer className="defer-render border-t border-border/40 bg-ink pb-24 pt-10 sm:py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-center sm:px-6 md:flex-row md:text-left">
           <span className="text-lg font-semibold tracking-[0.3em] text-foreground">SARKAR</span>
           <p className="text-sm text-muted-foreground">
