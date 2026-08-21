@@ -189,3 +189,31 @@
     animation-duration: 0.01ms !important;
   }
 }
+
+
+/* Keep below-the-fold sections out of the initial paint and layout work. */
+.defer-render {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 850px;
+}
+
+/* The decorative backdrop does not need a fixed compositing layer. */
+.page-background {
+  will-change: auto;
+}
+
+@media (max-width: 639px) {
+  /* Blur filters and oversized shadows are expensive on mid-range mobile GPUs. */
+  .glass-card {
+    background: var(--color-card);
+    backdrop-filter: none;
+  }
+
+  .juice-glow {
+    box-shadow: none;
+  }
+
+  .page-background {
+    background: linear-gradient(to bottom, oklch(0.06 0.005 270), oklch(0.1 0.01 270)) !important;
+  }
+}
