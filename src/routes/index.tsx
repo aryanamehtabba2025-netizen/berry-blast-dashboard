@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
       {
         rel: "preload",
         as: "image",
-        href: heroImage640,
+        href: heroImage480,
         imagesrcset: heroSrcSet,
         imagesizes: heroSizes,
         fetchpriority: "high",
@@ -185,12 +185,12 @@ function Index() {
             <div className="relative">
               <div className="juice-glow absolute inset-0 -z-10 rounded-full opacity-60 blur-3xl" />
               <img
-                src={heroImage640}
+                src={heroImage480}
                 srcSet={heroSrcSet}
                 sizes={heroSizes}
                 alt="Berry Blast by Sarkar — the signature chess-king Sarkar bottle in deep purple glass with a purple tag, surrounded by blueberries, raspberries and mulberries in dark berry juices"
-                width={1600}
-                height={1200}
+                width={1280}
+                height={960}
                 className="relative rounded-2xl border border-border/30 shadow-2xl"
                 loading="eager"
                 decoding="async"
