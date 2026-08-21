@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "../assets/berry-blast-bottle.webp";
-import heroImage640 from "../assets/berry-blast-bottle-640.webp";
-import heroImage960 from "../assets/berry-blast-bottle-960.webp";
+import heroImage480 from "../assets/bb-480.webp";
+import heroImage720 from "../assets/bb-720.webp";
+import heroImage960 from "../assets/bb-960.webp";
 
-const heroSrcSet = `${heroImage640} 640w, ${heroImage960} 960w, ${heroImage} 1600w`;
-const heroSizes = "(max-width: 1023px) 92vw, 46vw";
+const heroSrcSet = `${heroImage480} 480w, ${heroImage720} 720w, ${heroImage960} 960w, ${heroImage} 1280w`;
+const heroSizes = "(max-width: 640px) 88vw, (max-width: 1023px) 70vw, 44vw";
 
 export const Route = createFileRoute("/")({
   component: Index,
