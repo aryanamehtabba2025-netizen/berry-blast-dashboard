@@ -30,7 +30,16 @@ export const Route = createFileRoute("/")({
         content: "Berry Blast by Sarkar — deep, dark, seductive. Blueberry, raspberry and mulberry over amber and musk. Unisex parfum, 100ml, ₹2,499.",
       },
     ],
-    links: [{ rel: "preload", as: "image", href: heroImage, fetchpriority: "high" }],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroImage640,
+        imagesrcset: heroSrcSet,
+        imagesizes: heroSizes,
+        fetchpriority: "high",
+      },
+    ],
   }),
 });
 
