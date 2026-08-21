@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "../assets/berry-blast-bottle.webp";
+import heroImage640 from "../assets/berry-blast-bottle-640.webp";
+import heroImage960 from "../assets/berry-blast-bottle-960.webp";
+
+const heroSrcSet = `${heroImage640} 640w, ${heroImage960} 960w, ${heroImage} 1600w`;
+const heroSizes = "(max-width: 1023px) 92vw, 46vw";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,7 +30,16 @@ export const Route = createFileRoute("/")({
         content: "Berry Blast by Sarkar — deep, dark, seductive. Blueberry, raspberry and mulberry over amber and musk. Unisex parfum, 100ml, ₹2,499.",
       },
     ],
-    links: [{ rel: "preload", as: "image", href: heroImage, fetchpriority: "high" }],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroImage640,
+        imagesrcset: heroSrcSet,
+        imagesizes: heroSizes,
+        fetchpriority: "high",
+      },
+    ],
   }),
 });
 
@@ -170,7 +184,9 @@ function Index() {
             <div className="relative">
               <div className="juice-glow absolute inset-0 -z-10 rounded-full opacity-60 blur-3xl" />
               <img
-                src={heroImage}
+                src={heroImage640}
+                srcSet={heroSrcSet}
+                sizes={heroSizes}
                 alt="Berry Blast by Sarkar — the signature chess-king Sarkar bottle in deep purple glass with a purple tag, surrounded by blueberries, raspberries and mulberries in dark berry juices"
                 width={1600}
                 height={1200}
